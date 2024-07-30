@@ -21,5 +21,10 @@ RSpec.describe StringCalculator do
       expect(StringCalculator.add("1,2,3")).to eq(6)
       expect(StringCalculator.add("4,5,6,7")).to eq(22)
     end
+
+    it 'returns the sum when numbers are separated by new lines' do
+      expect(StringCalculator.add("1\n2,3")).to eq(6)
+      expect(StringCalculator.add("4\n5\n6,7")).to eq(22)
+    end
   end
 end
